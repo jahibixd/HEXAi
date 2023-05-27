@@ -16,16 +16,8 @@
 --    end)
 
 -- loaders(master(https://loadstring/loaders) == true to (localService)
-local generateRandomNumber(min, max)
-    return math.random(min, max)
-end
 
-local randomNumber = generateRandomNumber(17, 6713)
-
-local loadTime = randomNumber .. " ms"
-
-print("Finished Loading in " .. loadTime)
-
+print("Finished Loading in 3 ms")
 
 --game.ServerSide(Allow)
 -- getlocal(LoadingEvent.hexai) == true then
