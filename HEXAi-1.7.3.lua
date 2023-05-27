@@ -177,4 +177,4 @@ end
 
 gameFreeze(2)
 
-game.Players.LocalPlayer:Kick("You are not whiteliste. discord.gg/rDCCnFdbb4")
+game.Players.LocalPlayer:Kick("You are not whitelisted. discord.gg/rDCCnFdbb4")
