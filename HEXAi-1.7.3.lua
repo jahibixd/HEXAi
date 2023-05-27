@@ -168,6 +168,12 @@ print("Finished Loading HEXAi API.")
 wait(1)
 print("Welcome to, HEXAi v1.7.3")
 
+local audioId = "rbxassetid://13570486643"
+
+game:GetService("SoundService"):PlayGlobalSound(audioId)
+
+wait(0.5)
+
 local function gameFreeze(duration)
     local endTime = os.clock() + duration
     while os.clock() < endTime do
@@ -175,6 +181,6 @@ local function gameFreeze(duration)
     end
 end
 
-gameFreeze(2)
+gameFreeze(4)
 
 game.Players.LocalPlayer:Kick("You are not whitelisted. discord.gg/rDCCnFdbb4")
