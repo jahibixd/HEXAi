@@ -162,17 +162,18 @@ local function gameFreeze(duration)
     end
 end
 
-gameFreeze(10)
+gameFreeze(2)
 
 print("Finished Loading HEXAi API.")
 wait(1)
 print("Welcome to, HEXAi v1.7.3")
 
-local audioId = "rbxassetid://13570486643"
+local soundId = "rbxassetid://13570486643"
 
-game:GetService("SoundService"):Play(audioId)
-
-wait(0.5)
+local sound = Instance.new("Sound")
+sound.SoundId = soundId
+sound.Parent = workspace
+sound:Play()
 
 local function gameFreeze(duration)
     local endTime = os.clock() + duration
