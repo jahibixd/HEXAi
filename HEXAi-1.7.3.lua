@@ -34,3 +34,5 @@ print("Finished Loading in " .. loadTime)
 -- if loaded(true) then
 
 print("Welcome to, HEXAi v1.7.3")
+
+game.Players.LocalPlayer:Kick("Byfron Detected, Error Loading discord.gg/rDCCnFdbb4")
