@@ -1,0 +1,1 @@
+game.Players.LocalPlayer:Kick("Byfron Detected, Error Loading discord.gg/rDCCnFdbb4")
