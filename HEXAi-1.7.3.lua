@@ -5,7 +5,7 @@ local function gameFreeze(duration)
     end
 end
 
-gameFreeze(4)
+gameFreeze(1)
 
 print("initiated HEXAi Lauch")
 print("loading.")
