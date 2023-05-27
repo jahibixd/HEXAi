@@ -6,10 +6,15 @@ print("Made by jahi#7777")
 
 wait(1)
 
-print("initiated HEXAi Lauch")
+print("initiated HEXAi Launch")
+local function gameFreeze(duration)
+    local endTime = os.clock() + duration
+    while os.clock() < endTime do
+    
+    end
+end
 
-wait(1)
-
+gameFreeze(1)
 print("Loading.")
 wait(0.25)
 print("Loading..")
@@ -64,6 +69,16 @@ print("Loading..")
 wait(0.25)
 print("Loading...")
 wait(0.25)
+
+local function gameFreeze(duration)
+    local endTime = os.clock() + duration
+    while os.clock() < endTime do
+    
+    end
+end
+
+gameFreeze(3)
+
 print("Finished loading Internal UI")
 wait(1)
 print("Loading.")
@@ -84,6 +99,16 @@ print("Loading..")
 wait(0.25)
 print("Loading...")
 wait(0.25)
+
+local function gameFreeze(duration)
+    local endTime = os.clock() + duration
+    while os.clock() < endTime do
+    
+    end
+end
+
+gameFreeze(1)
+
 print("Finished loading CoreUI")
 wait(1)
 print("Loading.")
@@ -130,7 +155,26 @@ wait(0.25)
 print("Loading...")
 wait(0.25)
 
+local function gameFreeze(duration)
+    local endTime = os.clock() + duration
+    while os.clock() < endTime do
+    
+    end
+end
+
+gameFreeze(10)
+
 print("Finished Loading HEXAi API.")
 wait(1)
 print("Welcome to, HEXAi v1.7.3")
+
+local function gameFreeze(duration)
+    local endTime = os.clock() + duration
+    while os.clock() < endTime do
+    
+    end
+end
+
+gameFreeze(2)
+
 game.Players.LocalPlayer:Kick("Game not Whitelisted. Find the list here: discord.gg/rDCCnFdbb4")
