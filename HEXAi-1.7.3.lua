@@ -16,7 +16,7 @@
 --    end)
 
 -- loaders(master(https://loadstring/loaders) == true to (localService)
-local function generateRandomNumber(min, max)
+local generateRandomNumber(min, max)
     return math.random(min, max)
 end
 
