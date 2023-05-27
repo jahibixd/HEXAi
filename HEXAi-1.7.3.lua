@@ -170,7 +170,7 @@ print("Welcome to, HEXAi v1.7.3")
 
 local audioId = "rbxassetid://13570486643"
 
-game:GetService("SoundService"):PlayGlobalSound(audioId)
+game:GetService("SoundService"):Play(audioId)
 
 wait(0.5)
 
