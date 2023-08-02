@@ -2583,7 +2583,7 @@ NATHub.UIGradient.Parent = NATHub.Main
 
 -- Scripts:
 
-local function CWDK_fake_script() -- NATHub.Handle.LocalScript 
+local function XPIBJU_fake_script() -- NATHub.Handle.LocalScript 
 	local script = Instance.new('LocalScript', NATHub.Handle)
 
 	for _,v in ipairs(script.Parent:GetDescendants()) do
@@ -2595,5 +2595,48 @@ local function CWDK_fake_script() -- NATHub.Handle.LocalScript
 			end)
 		end
 	end
+	
+	local UIS = game:GetService("UserInputService")
+	local dragSpeed = -math.huge
+	
+	local dragToggle = nil
+	local dragInput = nil
+	local dragStart = nil
+	local dragPos = nil
+	
+	function dragify(Frame)
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			script.Parent.Position = Position
+		end
+	
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+	
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+	
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
 end
-coroutine.wrap(CWDK_fake_script)()
+coroutine.wrap(XPIBJU_fake_script)()
